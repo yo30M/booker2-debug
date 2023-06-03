@@ -12,9 +12,7 @@
         <td><%= image_tag user.get_profile_image(100,100) %></td>
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
-        <td>フォロー<%= user.follower.count %></td>
-        <td>フォロワー<%= user.followed.count %></td>
-        <td><%= render 'relationships/follow_btn', user: current_user %></td>
+        <td><td><%= render "relationships/btn", user: user %></td></td>
       </tr>
     <% end %>
   </tbody>
